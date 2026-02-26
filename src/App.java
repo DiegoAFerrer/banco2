@@ -8,7 +8,7 @@ public class App {
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
 
-        Account account = new Account(name);
+        Account account = new Account("name", "1234");
 
         int option;
 

@@ -1,28 +1,41 @@
 public class Account {
-    
- 
-  private String name;
-  private int saved;
+    private int accountNumber;
+    private String name;
+    private String NIP;
+    private int saved;
   
-public Account(String name){
-    this.name = name;
-    this.saved = 0;
-}
+    public Account(String name, String NIP){
+        this.name = name;
+        this.NIP = NIP;
+        this.saved = 0;
+    }
 
-public void deposit(int amount){
-    this.saved += amount;
-}
+    public void deposit(int amount){
+        if (amount <= 0) {
+            System.out.println("Exception");
+        } else{ 
+            this.saved += amount; 
+        }
+    }
 
-public void withdraw(int amount){
-    this.saved -= amount;
-}
+    public void withdraw(int amount){
+        if (amount > saved) {
+            System.out.println("Exception");
+        } else{ 
+            this.saved -= amount; 
+        }
+    }
 
-public int getSaved(){
-    return this.saved;
-}
+    public String getNIP(){
+        return this.NIP;
+    }
 
-public String getName(){
-    return this.name;
-}
+    public int getSaved(){
+        return this.saved;
+    }
+
+    public String getName(){
+        return this.name;
+    }
   
 }
