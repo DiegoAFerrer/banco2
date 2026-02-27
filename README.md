@@ -16,3 +16,6 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+// agregar nip , hacer cajero con monto minimo de retiro  200 multiplo de cuenta 100, pago de servicios, recibir billetes de cualquier denominacion y dar cambio en monedas y billetes de cualquier denominacion , agrgar registros de movimientos de la cuenta bancaria .

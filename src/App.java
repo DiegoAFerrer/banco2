@@ -8,6 +8,8 @@ public class App {
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
 
+        
+
         Account account = new Account("name", "1234");
 
         int option;
@@ -27,13 +29,13 @@ public class App {
                 case 1:
                     System.out.print("Amount to deposit: ");
                     int depositAmount = sc.nextInt();
-                    account.deposit(depositAmount);
+                    ATM.deposit(account, depositAmount);
                     break;
 
                 case 2:
                     System.out.print("Amount to withdraw: ");
                     int withdrawAmount = sc.nextInt();
-                    account.withdraw(withdrawAmount);
+                    ATM.deposit(account, withdrawAmount);
                     break;
 
                 case 3:
