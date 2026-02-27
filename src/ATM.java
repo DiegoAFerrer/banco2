@@ -10,31 +10,37 @@ public class ATM{
         }
     }
 
-    public static boolean deposit(Account account, double amount){
-        if (amount % 200 == 0){
-            account.deposit(amount);
+    public static boolean deposit(Account account, ArrayList<Double> bills) {
+
+        double sum = countBills(bills);
+
+        if (sum % 200 == 0){
+            account.deposit(sum);
+            return true;
+        } else { 
+            return false;
+        }
+    }
+
+    public static boolean withdraw(Account account, ArrayList<Double> bills){
+
+        double sum = countBills(bills);
+
+        if (sum % 100 == 0){
+            account.deposit(sum);
             return true;
         } else {
             return false;
         }
     }
 
-    public static boolean withdraw(Account account, double amount){
-        if (amount % 100 == 0){
-            account.deposit(amount);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public static double countBills(ArrayList<Double> bills){
+    private static double countBills(ArrayList<Double> bills){
         double sum = 0;
 
         for (Double billValue : bills) {
             sum += billValue;
         }
-        
+               
         return sum;
     }
 }

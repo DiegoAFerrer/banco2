@@ -52,5 +52,15 @@ public class Account {
     public String getName(){
         return this.name;
     }
+
+    public String getTransactionHistory(){
+        String history = "";
+        for (Transaction transaction : transactionHistory) {
+            history += transaction.getDate() + " | " + transaction.getAmount() + "\n";
+        }
+        history += "End of Transaction History.";
+
+        return history;
+    }
   
 }
